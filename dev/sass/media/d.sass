@@ -1,0 +1,12 @@
+$unit: 'px'
+.section
+  +w($desktop#{$unit})
+.btn
+  span
+    &:after
+      transition: .5s ease
+  &:hover
+    span
+      &:after
+        +wh(600px)
+        transform: translateY(-250px) translateX(-100px) rotate(30deg)

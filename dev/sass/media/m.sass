@@ -1,0 +1,80 @@
+$unit: 'px'
+.section
+  +w($mobile#{$unit})
+  margin: auto
+.dfac
+  display: flex
+  align-items: center
+.logo
+  span
+    +font(23px,$f_heavy)
+    text-transform: uppercase
+  &>span
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-left: 5px
+    &>span:last-child
+      display: flex
+      align-items: center
+      span:nth-child(2)
+        font-size: 6px
+        margin: 0 9px
+      span:first-child,span:last-child
+        +wh(42px,1px)
+        display: block
+        background-color: $black
+.btn
+  +font(16px,$f_heavy,$black)
+  text-transform: uppercase
+  &,& span
+    position: relative
+    display: block
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+  &:after
+    +wh(10px)
+    +bdrs(100%)
+    background-color: #fff
+    margin: auto
+    bottom: -8px
+    right: 0
+  &,&:after
+    border: 2px solid $black
+  span
+    +wh(100%)
+    padding: 10px 70px
+    overflow: hidden
+    &:after
+      +wh(100px)
+      +bg(100%, url('../img/triangle.svg'))
+      top: 0
+      z-index: -1
+.head
+  padding: 14px 0 24px
+  &-nav
+    &-item
+      margin-left: 30px
+  &-logo
+  &-link
+    font-family: $f_semi
+
+
+.first-screen
+  +wh(100%,100vh)
+  +dfc
+  &-center
+    h1
+      span
+        +font(36px,$f_heavy)
+        text-transform: uppercase
+      span:last-child
+        display: block
+        font-size: 20px
+      &:after
+        +af
+        +wh(85%,2px)
+        background-color: $black
+        margin: 15px 0
