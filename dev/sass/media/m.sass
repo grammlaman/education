@@ -2,12 +2,23 @@ $unit: 'px'
 .section
   +w($mobile#{$unit})
   margin: auto
+  padding: 0 10px
 .dfac
   display: flex
   align-items: center
+.mob-none
+  display: none
 .logo
-  span
-    +font(23px,$f_heavy)
+  display: flex
+  flex-direction: column
+  align-items: center
+  svg
+    +wh(70px,39px)
+    margin-bottom: 5px
+    path
+      fill: #fff
+  strong,em
+    +font(23px,$f_heavy,#fff)
     text-transform: uppercase
   &>span
     display: flex
@@ -17,15 +28,15 @@ $unit: 'px'
     &>span:last-child
       display: flex
       align-items: center
-      span:nth-child(2)
+      em
         font-size: 6px
         margin: 0 9px
       span:first-child,span:last-child
-        +wh(42px,1px)
+        +wh(40px,1px)
         display: block
-        background-color: $black
+        background-color: #fff
 .btn
-  +font(16px,$f_heavy,$black)
+  +font(16px,$f_extra,$black)
   text-transform: uppercase
   &,& span
     position: relative
@@ -45,36 +56,95 @@ $unit: 'px'
     border: 2px solid $black
   span
     +wh(100%)
-    padding: 10px 70px
+    padding: 10px 22px
     overflow: hidden
     &:after
       +wh(100px)
       +bg(100%, url('../img/triangle.svg'))
       top: 0
       z-index: -1
+      opacity: 50%
+  &-right
+    margin-left: auto
+header
+  +w(100%)
+  padding: 14px 0 16px
+  background-color: $black
 .head
-  padding: 14px 0 24px
-  &-nav
-    &-item
-      margin-left: 30px
   &-logo
+    display: flex
+    justify-content: center
+  &-nav,&-login
+    display: none
   &-link
     font-family: $f_semi
+    color: #fff
 
 
-.first-screen
+.screen
   +wh(100%,100vh)
   +dfc
-  &-center
-    h1
-      span
-        +font(36px,$f_heavy)
-        text-transform: uppercase
-      span:last-child
-        display: block
-        font-size: 20px
-      &:after
-        +af
-        +wh(85%,2px)
-        background-color: $black
-        margin: 15px 0
+  &-first
+    height: calc(100vh - 109px)
+    padding-bottom: 109px
+  &-title
+    margin-bottom: 40px
+.block
+  padding: 20px 0
+  h1,h2
+    span
+      +font(20px,$f_heavy)
+      text-transform: uppercase
+      display: block
+    span:first-child
+      font-size: 36px
+  h1
+    &:after
+      +af
+      +wh(85%,2px)
+      background-color: $black
+      margin: 15px 0
+  h2
+    position: relative
+    svg
+      +w(26px)
+      position: absolute
+      bottom: -20px
+  h3
+    +font(24px,$f_bold)
+    margin-bottom: 10px
+  h4
+    +font(20px,$f_semi)
+    margin-bottom: 5px
+  &-desc
+    margin: 0 0 30px
+    &>p
+      font-size: 16px
+      line-height: 24px
+      margin-top: 20px
+    &>p:first-child
+      margin-top: 0
+    strong
+      font-family: $f_semi
+    &-insert
+      margin-top: 10px
+      padding: 20px 0
+      background-color: $black
+      &-shift
+        padding-left: 25px
+        color: $orange
+        line-height: 20px
+        span
+          color: #fff
+  &-html
+    svg
+      left: 110px
+      path
+        fill: #fff
+  &-js
+    h2
+      text-align: right
+    svg
+      right: 100px
+      path
+        fill: $black

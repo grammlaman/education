@@ -1,22 +1,23 @@
 header
     .section
-        //.bricks.alic.head
-        //    .t3.d2
-        //        a(href='#').head-logo.logo.dfac
-        //            +img('/logo.svg')
-        //            span
-        //                span Grammla
-        //                span
-        //                    span
-        //                    span School
-        //                    span
-        //    .t6.d8
-        //        ul.head-nav.dfac
-        //            li.head-nav-item
-        //                a(href='#').head-link Курсы
-        //            li.head-nav-item
-        //                a(href='#').head-link Статьи
-        //            li.head-nav-item
-        //                a(href='#').head-link Контакты
-        //    .t3.d2
-        //        a(href='#').head-login.head-link Регистрация / Вход
+        .bricks.alic.head
+            ul.head-nav.dfac.m12.t4.d5
+                li.head-nav-item
+                    a(href='#').head-link Курсы
+                li.head-nav-item
+                    a(href='#').head-link Статьи
+                li.head-nav-item
+                    a(href='#').head-link Контакты
+            .m12.t4.d2.head-logo
+                a(href='#').logo.dfac
+                    include ../../img/logo.svg
+                    span
+                        strong Grammla
+                        span
+                            span
+                            em School
+                            span
+            .t4.d5.head-login
+                a(href='#').head-login-reg.head-link Регистрация
+                span.head-link.mob-none /
+                a(href='#').head-login-reg.head-link Вход

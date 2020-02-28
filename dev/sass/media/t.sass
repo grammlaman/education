@@ -1,6 +1,22 @@
 $unit: 'px'
 .section
-  +w($tablet#{$unit})
-.button
+  +w(700px)
+.mob-none
+  display: block
+.btn
   &>span
-    padding: 14px 96px
+    padding: 15px 23px 16px
+  &-right
+    margin-right: 70px
+  &-left
+    margin-left: 70px
+.head
+  &-nav,&-login
+    display: flex
+  &-nav
+    &-item
+      margin-right: 30px
+  &-login
+    justify-content: flex-end
+    span
+      margin: 0 5px

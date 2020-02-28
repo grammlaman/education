@@ -4,9 +4,21 @@ $unit: 'px'
 .btn
   span
     &:after
-      transition: .5s ease
+      transition: 1s ease
+  i
+    font-size: 26px
   &:hover
     span
       &:after
         +wh(600px)
-        transform: translateY(-250px) translateX(-100px) rotate(30deg)
+        transform: translateY(-250px) translateX(-80px) rotate(30deg)
+        opacity: 1
+.block
+  h1,h2
+    span
+      font-size: 62px
+    span:first-child
+      font-size: 90px
+  h1:after
+    height: 5px
+    margin: 45px 0 50px
