@@ -1,6 +1,9 @@
 $unit: 'px'
 .section
   +w($desktop#{$unit})
+$context: 20px
+body
+  --co: 1
 .btn
   span
     &:after
@@ -11,14 +14,45 @@ $unit: 'px'
     span
       &:after
         +wh(600px)
-        transform: translateY(-250px) translateX(-80px) rotate(30deg)
+        transform: translateY(-200px) translateX(-160px) rotate(30deg)
         opacity: 1
+
+.page
+  &-h1
+    //font-size: 90px
+  &-h2
+    //font-size: 54px
+    line-height: 66px
+  &-h3
+    //font-size: 42px
+    line-height: 52px
+  &-h4
+    //font-size: 33px
+    line-height: 40px
+  &-h5
+    //font-size: 26px
+    line-height: 33px
+
+
+
+.head
+  a
+    &:hover
+      path,text
+        fill: $yellow
+      line
+        stroke: $yellow
+      color: $yellow
+
 .block
-  h1,h2
-    span
-      font-size: 62px
-    span:first-child
-      font-size: 90px
   h1:after
     height: 5px
     margin: 45px 0 50px
+  &-html
+    h2
+      svg
+        left: 280px
+  &-js
+    h2
+      svg
+        right: 210px

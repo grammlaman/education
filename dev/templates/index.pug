@@ -4,85 +4,51 @@ append vars
     page_title= 'Education'
 block content
     main
-        .section
-            .row.screen.screen-first.block
-                .screen-center
-                    h1
-                        span Обучение
-                        span веб программированию
-                        span и вёрстке
-                    button.btn
-                        span
-                            i Начать
-            .row.screen.block.block-html
-                .screen-center
-                    h2.screen-title
-                        span HTML & CSS
-                        include ../img/title-triangle.svg
-                    .block-desc
-                        p Планируете соделать веб-технологии своей профессией?
-                        p Хотите создавать сайты?
-                        p Работать верстальщиком, web-дизайнером, а может, интернет-маркетологом?
-                        p У вас есть онлайн-проект, который Вы продвигаете сами?
-                        p В любом случае, Вам не обойтись без знания HTML и CSS - языков разметки веб-страниц и их внешнего оформления.
-                    button.btn.btn-right
-                        span
-                            i Подробнее
-            .row.screen.block.block-js
-                .screen-center
-                    h2.screen-title
-                        span JavaScript
-                        include ../img/title-triangle.svg
-                    .block-desc
-                        p Javascript – это не Java. JS- это интерпретируемый язык, полноценный столь же сложный как и любой другой и даже более сложный чем некоторые.
-                        p Любой кто имеет веб- браузер сможет начать писать и исполнять первые строки кода.
-                        p Вас наверное удивит, что в себе скрывают ваши привычные страницы на просторах интернета.
-                    button.btn.btn-left
-                        span
-                            i Подробнее
-            .row.block
-                h3 О разметке
-                .block-desc
-                    p Что такое гипертекст? Чем гипертекст отличается от обычного текста? Основная идея гипертекста - это когда один текст ссылается на другой. Так устроен весь интернет, где одна страница(текст) ссылается на другую.
-                    p Если посмотреть любой произвольный сайт, например Youtube.com. Открыть его код страницы то там вместо видеороликов мы найдем только текст. С гипертекстом разобрались, а что такое разметка?
-                    p Разметка гипертекста, если говорить простым языком придание ему "значения". Как разработчику нам важно, чтоб компьютер понимал, где находится заголовок, список или обычный параграф. Поэтому с помощью элементов разметки мы придаём семантическое значение тексту.
-            .row.block
-                h3 HTML - это
-                .block-desc
-                    p HTML - это язык разметки гипертекста. Давайте подробнее посмотрим, из чего он состоит. Единица структуры html - элемент.
-                h4 Элемент
-                .block-desc
-                    p Тэг сопутствующий атрибут и его содержимое.
-                h4 Тэг
-                .block-desc
-                    p Ключевое слово для разметки текста и придачи ему семантического значения.
-                .block-desc
-                    p #[strong Атрибут тега] - дополнительное "поведение", к примеру поменять цвет элемента или задать ему выравнивание.
-            .row.block
-                h3 Структура HTML
-                .block-desc
-                    p Чтобы начать размечать гипертекст(верстать), надо создать файл с расширением.html. Далее следует вписать в файл структуру html.
-                    .block-desc-insert
-                        .block-desc-insert-shift #[i <]html>
-                            .block-desc-insert-shift #[i <]head>
-                                .block-desc-insert-shift
-                                    span Служебная информация
-                            .block-desc-insert-shift #[i <]/head>
-                            .block-desc-insert-shift #[i <]body>
-                                .block-desc-insert-shift
-                                    span Тело документа(содержание)
-                            .block-desc-insert-shift #[i <]/body>
-                        .block-desc-insert-shift #[i <]/html>
-                    p #[strong Тег html] - это основа разметки контейнер для тега head и body. В head распологается служебная информация, то что пользователь не увидит. Элемент body содержит тело документа, то что будет выведено на страницу( сайт ).
-                    p Теги бывают 2ух типов. Парные и одиночные теги. Тег состоит из угловой скобки "<" имя тега ">" содержимое тега "<" /имя тега ">".
-
-
-
-
-
-
-
-
-
-
-
+        .row
+            .screen.block.block-education
+                include ../img/left-top-triangle.svg
+                include ../img/right-top-triangle.svg
+                .section.bricks.alic
+                    .screen-center.d9
+                        .block-underline
+                            h1.page-h1 ОБУЧЕНИЕ
+                            h2.page-h2 ВЕБ ПРОГРАММИРОВАНИЮ
+                            h2.page-h2 И ВЁРСТКЕ
+                        button.btn
+                            span
+                                i Начать
+        .row
+            .screen.block.block-html
+                include ../img/big-orange-triangle.svg
+                .section.bricks.alic
+                    .screen-center.d9
+                        h2.screen-title.page-h1
+                            span HTML & CSS
+                            include ../img/title-triangle.svg
+                        .block-desc
+                            p Планируете соделать веб-технологии своей профессией?
+                            p Хотите создавать сайты?
+                            p Работать верстальщиком, web-дизайнером, а может, интернет-маркетологом?
+                            p У вас есть онлайн-проект, который Вы продвигаете сами?
+                            p В любом случае, Вам не обойтись без знания HTML и CSS - языков разметки веб-страниц и их внешнего оформления.
+                        button.btn.btn-right
+                            span
+                                i Подробнее
+        .row
+            .screen.block.block-js
+                include ../img/middle-left-rectangle.svg
+                include ../img/bottom-left-rectangle.svg
+                .section.bricks.alic
+                    .screen-center.d9
+                        h2.screen-title.page-h1
+                            span JavaScript
+                            include ../img/title-triangle.svg
+                        .block-desc
+                            p Javascript – это не Java. JS- это интерпретируемый язык, полноценный столь же сложный как и любой другой и даже более сложный чем некоторые.
+                            p Любой кто имеет веб- браузер сможет начать писать и исполнять первые строки кода.
+                            p Вас наверное удивит, что в себе скрывают ваши привычные страницы на просторах интернета.
+                        button.btn.btn-left
+                            span
+                                i Подробнее
+        .row
+            .screen.block

@@ -1,8 +1,12 @@
 $unit: 'px'
+body
+  --co: 1.4
 .section
   +w(700px)
+
 .mob-none
   display: block
+
 .btn
   &>span
     padding: 15px 23px 16px
@@ -10,6 +14,20 @@ $unit: 'px'
     margin-right: 70px
   &-left
     margin-left: 70px
+
+.page
+  &-h1
+//    font-size: 60px
+//  &-h2
+//    font-size: 36px
+//  &-h3
+//    font-size: 30px
+//  &-h4
+//    font-size: 30px
+//  &-h5
+//    font-size: 30px
+
+
 .head
   &-nav,&-login
     display: flex
@@ -20,3 +38,20 @@ $unit: 'px'
     justify-content: flex-end
     span
       margin: 0 5px
+
+.block
+  h1,h2
+    svg
+      +w(36px)
+  &-js
+    h2
+      svg
+        right: 130px
+  &-html
+    h2
+      svg
+        left: 160px
+  &-desc
+    &-insert
+      &-shift
+        padding-left: 50px

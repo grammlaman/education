@@ -1,40 +1,18 @@
 $unit: 'px'
+body
+  --co: 1.8
 .section
   +w($mobile#{$unit})
   margin: auto
   padding: 0 10px
+
 .dfac
   display: flex
   align-items: center
+
 .mob-none
   display: none
-.logo
-  display: flex
-  flex-direction: column
-  align-items: center
-  svg
-    +wh(70px,39px)
-    margin-bottom: 5px
-    path
-      fill: #fff
-  strong,em
-    +font(23px,$f_heavy,#fff)
-    text-transform: uppercase
-  &>span
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    margin-left: 5px
-    &>span:last-child
-      display: flex
-      align-items: center
-      em
-        font-size: 6px
-        margin: 0 9px
-      span:first-child,span:last-child
-        +wh(40px,1px)
-        display: block
-        background-color: #fff
+
 .btn
   +font(16px,$f_extra,$black)
   text-transform: uppercase
@@ -66,66 +44,93 @@ $unit: 'px'
       opacity: 50%
   &-right
     margin-left: auto
+
+
+.page
+  &-h1,&-h2,&-h3,&-h4
+    display: block
+  &-h1
+    --fz: 90
+    --lh: 120
+    --mb: 50
+  &-h2
+    --fz: 54
+    --lh: 66
+    --mb: 30
+  &-h3
+    --fz: 42
+    --lh: 52
+    --mb: 25
+  &-h4
+    --fz: 33
+    --lh: 40
+    --mb: 20
+  &-h5
+    --fz: 26
+    --lh: 33
+    --mb: 18
+
+  &-h1,&-h2,&-h3,&-h4,&-h5
+    --rh: var(--fz) / 1.4
+    --lihbottom:  (((var(--lh) - var(--rh)) - 4 ) / 2)
+    +font(calc( (var(--fz) / var(--co))*1px),$f_heavy)
+    line-height: calc( ( var(--lh)/ var(--co))*1px)
+    margin-bottom: calc( (var(--mb) - var(--lihbottom)) *1px)
+  &-h3,&-h4,&-h5
+    font-family: $f_bold
+
+
 header
   +w(100%)
   padding: 14px 0 16px
   background-color: $black
+  overflow: hidden
+  position: relative
+  &>svg
+    position: absolute
+    top: -170px
+    right: -30px
 .head
   &-logo
     display: flex
     justify-content: center
   &-nav,&-login
     display: none
-  &-link
+  &-link,&-login
     font-family: $f_semi
     color: #fff
 
 
 .screen
   +wh(100%,100vh)
-  +dfc
-  &-first
-    height: calc(100vh - 109px)
-    padding-bottom: 109px
+  display: flex
+  align-items: center
   &-title
     margin-bottom: 40px
-.block
-  padding: 20px 0
-  h1,h2
-    span
-      +font(20px,$f_heavy)
-      text-transform: uppercase
-      display: block
-    span:first-child
-      font-size: 36px
-  h1
-    &:after
-      +af
-      +wh(85%,2px)
-      background-color: $black
-      margin: 15px 0
-  h2
     position: relative
     svg
       +w(26px)
       position: absolute
       bottom: -20px
+
+.block
+  position: relative
+  padding: 20px 0
+  &-underline
+      &:after
+        +af
+        +wh(85%,2px)
+        background-color: $black
+        margin: 15px 0
   h3
-    +font(24px,$f_bold)
     margin-bottom: 10px
   h4
-    +font(20px,$f_semi)
     margin-bottom: 5px
+  &>svg
+    position: absolute
+    z-index: -1
   &-desc
-    margin: 0 0 30px
-    &>p
-      font-size: 16px
-      line-height: 24px
-      margin-top: 20px
-    &>p:first-child
-      margin-top: 0
-    strong
-      font-family: $f_semi
+    padding: 0 0 25px
     &-insert
       margin-top: 10px
       padding: 20px 0
@@ -136,15 +141,44 @@ header
         line-height: 20px
         span
           color: #fff
+    p
+      margin-top: 20px
+      strong
+        font-family: $f_semi
+      &:last-child
+        margin-bottom: 0
+  &-education
+    height: calc(100vh - 109px)
+    padding-bottom: 109px
+    &>svg
+      transform: rotate(55deg)
+      &:first-child
+        left: -300px
+        top: 150px
+      &:nth-child(2)
+        right: -420px
+        top: 50px
   &-html
-    svg
-      left: 110px
-      path
-        fill: #fff
+    h2
+      svg
+        left: 110px
+        path
+          fill: #fff
+    &>svg
+      +w(900px)
+      transform: rotate(14deg)
+      left: -360px
+      top: -300px
   &-js
     h2
       text-align: right
-    svg
-      right: 100px
-      path
-        fill: $black
+      svg
+        right: 80px
+        path
+          fill: $black
+    &>svg
+      &:first-child
+        left: -400px
+      &:nth-child(2)
+        left: 134px
+        top: 800px

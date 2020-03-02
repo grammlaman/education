@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="365" height="406" viewBox="0 0 365 406">
+  <g id="bottom-left-rectangle" fill="none" opacity="0.52">
+    <path d="M0,0H365V406H0Z" stroke="none"/>
+    <path d="M 4 4 L 4 402 L 361 402 L 361 4 L 4 4 M 0 0 L 365 0 L 365 406 L 0 406 L 0 0 Z" stroke="none" fill="#ffda44"/>
+  </g>
+</svg>
